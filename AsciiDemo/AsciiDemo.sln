@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDemo.TestApp", "AsciiDemo.TestApp\AsciiDemo.TestApp.csproj", "{17999664-9DFD-4CA7-BC23-271E54B67BFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDemo.TcpListenerApp", "AsciiDemo.TcpListenerApp\AsciiDemo.TcpListenerApp.csproj", "{8D8DA954-6C5C-43E6-8F37-DB776EA3CCAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AsciiDemo.TcpListenerApp", "AsciiDemo.TcpListenerApp\AsciiDemo.TcpListenerApp.csproj", "{8D8DA954-6C5C-43E6-8F37-DB776EA3CCAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsciiDemo.Common", "AsciiDemo.Common\AsciiDemo.Common.csproj", "{CBB53D90-1610-4685-A29F-95802A38FBEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D8DA954-6C5C-43E6-8F37-DB776EA3CCAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D8DA954-6C5C-43E6-8F37-DB776EA3CCAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D8DA954-6C5C-43E6-8F37-DB776EA3CCAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBB53D90-1610-4685-A29F-95802A38FBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBB53D90-1610-4685-A29F-95802A38FBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBB53D90-1610-4685-A29F-95802A38FBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBB53D90-1610-4685-A29F-95802A38FBEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

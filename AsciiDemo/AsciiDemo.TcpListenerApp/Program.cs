@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AsciiDemo.Common;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -27,7 +28,7 @@ namespace AsciiDemo.TcpListenerApp
                 // Enter the listening loop.
                 while (true)
                 {
-                    Console.Write("Waiting for a connection... ");
+                    Console.Write("TCP Server Waiting for a connection... ");
 
                     // Perform a blocking call to accept requests.
                     // You could also use server.AcceptSocket() here.
@@ -49,10 +50,10 @@ namespace AsciiDemo.TcpListenerApp
                         data = Encoding.ASCII.GetString(bytes, 0, i);
                         Console.WriteLine("Received: {0}", data);
 
-                        // Process the data sent by the client.
+                        //TODO: Process the data sent by the client.
                         //data = data.ToUpper();
 
-
+                        //Prepare Response to send back to caller
                         byte ACK = Convert.ToByte("06", 16);
                         byte NAK = Convert.ToByte("15", 16);
                         byte[] msg = new byte[1];
@@ -72,7 +73,7 @@ namespace AsciiDemo.TcpListenerApp
 
                         // Send back a response.
                         stream.Write(msg, 0, msg.Length);
-                        Console.WriteLine("Sent: {0}", GetDecodedData(msg));
+                        Console.WriteLine("Sent: {0}", Utils.GetAsciiStringFromByteArray(msg));
                     }
 
                     // Shutdown and end connection
@@ -93,10 +94,5 @@ namespace AsciiDemo.TcpListenerApp
             Console.Read();
         }
 
-        private static string GetDecodedData(byte[] data)
-        {
-            //Encoding.GetString() method converts an array of bytes into a string
-            return Encoding.ASCII.GetString(data);
-        }
     }
 }
