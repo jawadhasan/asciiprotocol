@@ -49,11 +49,6 @@ namespace AsciiDemo.TestApp
             Console.WriteLine($"Press any key to exit.");
             Console.ReadLine();
         }
-
-
-
-
-
         private static byte[] BuildCommand(string content)
         {
             //COMMAND STRUCTURE => <STX><DLE>CONTENT<ETX> => <STX><DLE>ABC<ETX>
@@ -62,8 +57,7 @@ namespace AsciiDemo.TestApp
 
             //Encoding.GetBytes() method converts a string into a bytes array.
             byte[] contents = Encoding.ASCII.GetBytes(content);
-
-
+            
             //build structure
             command.AddRange(STX);
             command.AddRange(DLE);
@@ -72,6 +66,8 @@ namespace AsciiDemo.TestApp
 
             return command.ToArray();
         }
+
+        //Print Outputs on Console
         public static void PrintBytesOnConsole(byte[] command)
         {
             Console.WriteLine();
@@ -98,7 +94,6 @@ namespace AsciiDemo.TestApp
             Console.WriteLine(decodedData);
             Console.WriteLine();
         }
-
         //An example to build a command
         private static void Test1()
         {
