@@ -1,6 +1,6 @@
 # ASCII Protocol Sample
 
-Builds a simple ASCII Protocl COMMAND STRUCTURE => <STX><DLE>CONTENT<ETX> => <STX><DLE>ABC<ETX> and send ASCII protocl commands to TCP-Server
+Builds a simple ASCII Protocl COMMAND STRUCTURE => STX DLE CONTENT ETX => STX DLE ABC ETX and send ASCII protocl commands to TCP-Server
 
 .NET Solution consists of following projects:
 
@@ -19,7 +19,7 @@ Server recieve data from a TCP Client and return randomly ACK(06)/NAK(15) respon
 - ASCIIDemo.TestAPP
 
 This is TCP-Client.
-Builds a simple COMMAND STRUCTURE => <STX><DLE>CONTENT<ETX> => <STX><DLE>ABC<ETX> and send commands to TCP-Server.
+Builds a simple COMMAND STRUCTURE => STX DLE CONTENT ETX => STX DLE ABC ETX and send ASCII protocl commands to TCP-Server.
 
 There is also a NodeJS test TCP-client sample (net package + Buffer.from built-in functions).
 
