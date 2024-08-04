@@ -1,29 +1,30 @@
 # ASCII Protocol Sample
 
-Builds a simple ASCII Protocl COMMAND STRUCTURE => STX DLE CONTENT ETX => STX DLE ABC ETX and send ASCII protocl commands to TCP-Server
+Builds a simple ASCII Protocl COMMAND STRUCTURE => `STX DLE CONTENT ETX` => `STX DLE ABC ETX` and send ASCII protocl commands to TCP-Server.    
 
-.NET Solution consists of following projects:
+.NET Solution consists of following projects:    
 
-- ASCIIDemo.Common
+### ASCIIDemo.Common (Library)    
  
-Utils.cs (HexStringToByteArray, ByteArrayToHexString, GetAsciiStringFromByteArray)
+Utils.cs (HexStringToByteArray, ByteArrayToHexString, GetAsciiStringFromByteArray)    
 
 
-- ASCIIDemo.TCPListenerAPP - Console App
+### ASCIIDemo.TCPListenerAPP (Console App)        
 
-References ASCIIDemo.Common for utils.
-Program.cs is on basic example TCP-Server code at https://github.com/jawadhasan/modbus-tcpserver. 
-Server recieve data from a TCP Client and return randomly ACK(06)/NAK(15) responses.
+- References ASCIIDemo.Common for utils.    
+- Program.cs is on basic example TCP-Server code at https://github.com/jawadhasan/modbus-tcpserver.     
+- Server recieve data from a TCP Client and return randomly ACK(06)/NAK(15) responses.    
 
 
-- ASCIIDemo.TestAPP
+### ASCIIDemo.TestAPP
 
-This is TCP-Client.
-Builds a simple COMMAND STRUCTURE => STX DLE CONTENT ETX => STX DLE ABC ETX and send ASCII protocl commands to TCP-Server.
+- This is TCP-Client.    
 
-There is also a NodeJS test TCP-client sample (net package + Buffer.from built-in functions).
+- Builds a simple COMMAND STRUCTURE => STX DLE CONTENT ETX => STX DLE ABC ETX and send ASCII protocl commands to TCP-Server.
 
-check details on the article https://hexquote.com/dare-mighty-things-ascii/
+- There is also a NodeJS test TCP-client sample (net package + Buffer.from built-in functions).    
+
+- check details on the article https://hexquote.com/dare-mighty-things-ascii/    
 
 
 
