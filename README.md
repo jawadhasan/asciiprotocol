@@ -19,11 +19,8 @@ Utils.cs (HexStringToByteArray, ByteArrayToHexString, GetAsciiStringFromByteArra
 ### ASCIIDemo.TestAPP
 
 - This is TCP-Client.    
-
-- Builds a simple COMMAND STRUCTURE => STX DLE CONTENT ETX => STX DLE ABC ETX and send ASCII protocl commands to TCP-Server.
-
+- Builds a simple COMMAND STRUCTURE => `STX DLE CONTENT ETX` => `STX DLE ABC ETX and` send ASCII protocl commands to TCP-Server.
 - There is also a NodeJS test TCP-client sample (net package + Buffer.from built-in functions).    
-
 - check details on the article https://hexquote.com/dare-mighty-things-ascii/    
 
 
